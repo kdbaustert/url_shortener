@@ -10,6 +10,9 @@ app.use(bodyParser.urlencoded({
   extended: true,
 }));
 
+//routes
+app.use('/', require('./routes')(express));
+
 //configuration
 //set the port to a variable, defaults at 3000
  const port = process.env.PORT || 3000;
