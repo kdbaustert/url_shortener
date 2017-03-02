@@ -14,7 +14,7 @@ module.exports = (express) => {
 
   //get the url
   router.get('/api/v1/url/', function ( req, res ) {
-    res.send('long url: ' + 'http://www.' + shortid.generate(data.url) + '.com');
+    res.send('short url: ' + 'http://www.' + shortid.generate(data.url) + '.com');
   });
 
 return router;
