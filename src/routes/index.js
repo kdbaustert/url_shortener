@@ -1,5 +1,4 @@
 //require
-const data = require('../../url/url');
 const genShortenUrl = require('../modules/short_url');
 
 module.exports = (express) => {
@@ -9,7 +8,7 @@ module.exports = (express) => {
     console.log("route hit");
     res.json({
       healthy: true,
-    })
+    });
   });
 
   //get the url
