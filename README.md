@@ -11,7 +11,7 @@ You will need node and NPM
 
 [NPM](https://www.npmjs.com/)
 
-Using a terminal cd into the directory and then type
+Using your CLI cd into the directory and then type
 
 ```
 npm install
@@ -30,12 +30,18 @@ or you can install nodemon npm i nodemon -g then type in the following
 nodemon src/server.js
 ```
 
+In your CLI you should see
+
+```
+Server Active On 3000
+```
+
 ##API Reference
 
 Use postman do a POST request to localhost:3000/api/v1/url and you will get the short url back
 
 ```
-long url: http://www.HkKNCJH9l.com
+long url: http://www.something.com
 ```
 
 You can also check the status by doing a get request to localhost:3000/status you should receive the following
