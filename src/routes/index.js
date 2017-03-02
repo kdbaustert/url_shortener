@@ -1,6 +1,6 @@
 //require
 const data = require('../../url/url');
-const genShortenUrl = require('../lib/short_url');
+const genShortenUrl = require('../modules/short_url');
 
 module.exports = (express) => {
   const router = express.Router();
