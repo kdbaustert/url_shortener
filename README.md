@@ -11,7 +11,7 @@ You will need node and NPM
 
 [NPM](https://www.npmjs.com/)
 
-Using a terminal cd into the directory within the terminal type
+Using a terminal cd into the directory and then type
 
 ```
 npm install
@@ -29,3 +29,27 @@ or you can install nodemon npm i nodemon -g then type in the following
 ```
 nodemon src/server.js
 ```
+
+##API Reference
+
+Use postman do a get request to localhost:3000/api/v1/url and you will get the short url back
+
+```
+long url: http://www.HkKNCJH9l.com
+```
+
+You can also check the status by doing a get request to localhost:3000/status you should receive the following
+
+```
+{
+  "healthy": true
+}
+```
+
+##API Endpoints
+
+Status
+GET: /status
+
+Display url
+GET: /api/v1/url
