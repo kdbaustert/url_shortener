@@ -32,7 +32,7 @@ nodemon src/server.js
 
 ##API Reference
 
-Use postman do a get request to localhost:3000/api/v1/url and you will get the short url back
+Use postman do a POST request to localhost:3000/api/v1/url and you will get the short url back
 
 ```
 long url: http://www.HkKNCJH9l.com
@@ -52,4 +52,4 @@ Status
 GET: /status
 
 Display url
-GET: /api/v1/url
+POST: /api/v1/url

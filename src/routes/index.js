@@ -1,6 +1,6 @@
 //require
-const shortid = require('shortid');
 const data = require('../../url/url');
+const genShortenUrl = require('../lib/short_url');
 
 module.exports = (express) => {
   const router = express.Router();
@@ -13,8 +13,8 @@ module.exports = (express) => {
   });
 
   //get the url
-  router.get('/api/v1/url/', function ( req, res ) {
-    res.send('short url: ' + 'http://www.' + shortid.generate(data.url) + '.com');
+  router.post('/api/v1/url/', function ( req, res ) {
+    res.send('short url: ' + 'http://www.' + genShortenUrl.genShortenUrl() + '.com');
   });
 
 return router;
