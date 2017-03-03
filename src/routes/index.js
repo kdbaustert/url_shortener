@@ -1,28 +1,28 @@
-//require
-const genShortenUrl = require('../modules/short_url');
+// require models/url
 
+const url = require('../models/url');
+
+// Export express
 module.exports = (express) => {
   const router = express.Router();
 
-  //route for api status
-  router.get('/status', (req, res) => {
-    console.log("route hit");
-    res.json({
-      healthy: true,
-    });
+  // Router
+  router.get('/', (req, res) => {
+    res.json({ main: 'Main route hit!' });
   });
 
-  //Route to redirect
   router.get('/go/:shortenedUrl', (req, res) => {
     req.body.shortened_url = req.params.shortenedUrl;
     url.findShortenedURL(req.body, (err) => {
       res.status(500).json(err);
-      debug.debugError('error!');
     }, (data) => {
       res.redirect('http://www.' + data.original_url);
     });
   });
 
-return router;
+  router.use('/api/v1', require('./api/url')(express));
 
+    // Return express router
+
+  return router;
 };
