@@ -66,6 +66,12 @@ You can also check the status by doing a get request to localhost:3000/status yo
 }
 ```
 
+##Starting point
+
+```
+localhost:3000
+```
+
 ##Routes
 
 GET /go/:shortURL
