@@ -12,6 +12,7 @@ exports.findAll = (err, success) => {
   db.url.findAll().then(success).catch(err);
 };
 
+//findShortenedURL for go
 exports.findShortenedURL = (shortURL, success, err) => {
   db.url.find({
       where: {
