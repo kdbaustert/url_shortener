@@ -11,25 +11,16 @@ module.exports = (express) => {
     res.json({ main: 'Main route hit!' });
   });
 
-  /*router.get('/go/:shortenedUrl', (req, res) => {
-    req.body.shortened_url = req.params.shortenedUrl;
-    url.findShortenedURL(shortURL, (data) => {
-      res.status(500).json(err);
-    }, (data) => {
-      res.redirect('http://www.' + data.original_url);
-    });
-  });*/
-
   router.get('/go/:shortURL', (req, res) => {
   const shortURL = req.params.shortURL;
   url.findShortenedURL(shortURL, (data) => {
-    if (data == null) {
+    if (data !== null) {
+      res.redirect(data.original_url);
+    } else {
       const response = {
-        message: 'That ShortURL is not registered in our database.',
+        message: 'Cannot find that short url!',
       };
       res.json(response);
-    } else {
-      res.redirect(data.original_url);
     }
   });
 });
