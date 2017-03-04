@@ -17,11 +17,7 @@ exports.findShortenedURL = (payload, err, success) => {
   db.url.find({
     where: {
       shortened_url: payload.shortURL,
-    },
-    include: [{
-      all: true,
-      nested: true,
-    }],
+    }
   }).then(success).catch(err);
 };
 
