@@ -12,7 +12,20 @@ exports.findAll = (err, success) => {
   db.url.findAll().then(success).catch(err);
 };
 
-//find shorturl
+//find by shortened url
+exports.findShortenedURL = (payload, err, success) => {
+  db.url.find({
+    where: {
+      shortened_url: payload.shortURL,
+    },
+    include: [{
+      all: true,
+      nested: true,
+    }],
+  }).then(success).catch(err);
+};
+
+// find by short URL
 exports.findShortenedURL = (payload, err, success) => {
   db.url.find({
     where: {
