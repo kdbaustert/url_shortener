@@ -55,7 +55,6 @@ Use postman do a POST request to localhost:3000/api/v1/url with the following da
 ```
 {
 "original_url": "http://www.google.com",
-"shortened_url": "shortened_url"
 }
 ```
 
