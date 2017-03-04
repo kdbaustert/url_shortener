@@ -11,6 +11,7 @@ module.exports = (express) => {
     res.json({ main: 'Main route hit!' });
   });
 
+  //redirect if data is not null
   router.get('/go/:shortURL', (req, res) => {
   const shortURL = req.params.shortURL;
   url.findShortenedURL(shortURL, (data) => {
