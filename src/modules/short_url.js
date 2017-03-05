@@ -11,8 +11,7 @@ function genShortenUrl() {
     const rand = Math.round(Math.random() * alphaNumeric.length - 1);
     generateURL += alphaNumeric.charAt(rand);
   }
-
-
+  
   return generateURL;
 }
 
