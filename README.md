@@ -16,8 +16,16 @@ Using your CLI cd into the directory and then type
 ```
 npm install
 ```
+this will install the necessary packages
 
 MySQL is required you will need to create a .env file with the following information
+
+You can do this in your CLI by typing
+
+```
+touch .env
+```
+then with the following placed in the file 
 
 ```
 DB_NAME=[database name]
