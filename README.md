@@ -45,7 +45,13 @@ To start the server simply type
 node src/server.js
 ```
 
-or you can install nodemon npm i nodemon -g then type in the following
+or you can install nodemon this will allow you to make change without having to reload the server each time
+
+```
+npm i nodemon -g
+```
+
+then type in the following
 
 ```
 nodemon src/server.js
