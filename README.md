@@ -45,7 +45,7 @@ To start the server simply type
 node src/server.js
 ```
 
-or you can install nodemon this will allow you to make change without having to reload the server each time
+or you can install nodemon this will allow you to make changes without having to reload the server each time
 
 ```
 npm i nodemon -g
@@ -107,3 +107,19 @@ Display URL based on id GET: /api/v1/url/:id
 Update URL based on id POST: /api/v1/url/:id
 
 Delete url based on id DELETE: /api/v1/url/:id
+
+##DEBUG Features
+
+Under development
+
+##Testing
+
+Under development
+
+##Coding Style
+
+Under development
+
+##Workflow
+
+Under development
