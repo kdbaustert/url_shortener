@@ -18,14 +18,15 @@ npm install
 ```
 this will install the necessary packages
 
-MySQL is required you will need to create a .env file with the following information
+MySQL is required you will need to create a .env file
 
 You can do this in your CLI by typing
 
 ```
 touch .env
 ```
-then with the following placed in the file 
+
+with the following information
 
 ```
 DB_NAME=[database name]
