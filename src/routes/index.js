@@ -11,20 +11,17 @@ module.exports = (express) => {
     res.json({ main: 'Main route hit!' });
   });
 
-  //redirect if data is not null
-  router.get('/go/:shortURL', (req, res) => {
-  const shortURL = req.params.shortURL;
-  url.findShortenedURL(shortURL, (data) => {
-    if (data !== null) {
-      res.redirect(data.original_url);
-    } else {
-      const response = {
-        message: 'Cannot find that short url!',
-      };
-      res.json(response);
-    }
-  });
-});
+  router.get('/go/:shortUrl', (req, res) => {
+      const request = req;
+      const response = res;
+      request.body.shortUrl = request.params.shortUrl;
+      url.findShortenedURL(request.body, (err) => {
+        response.status(500).json(err);
+      }, (data) => {
+        // response redirects to original url
+        response.redirect(data.original_url);
+      });
+    });
 
   router.use('/api/v1', require('./api/url')(express));
 

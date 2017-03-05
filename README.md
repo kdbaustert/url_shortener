@@ -94,8 +94,6 @@ localhost:3000
 
 ##Routes
 
-Redirecting
-
 GET /go/:shortURL
 
 ##API Endpoints
