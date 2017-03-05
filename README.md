@@ -112,19 +112,3 @@ Display URL based on id GET: /api/v1/url/:id
 Update URL based on id POST: /api/v1/url/:id
 
 Delete url based on id DELETE: /api/v1/url/:id
-
-##DEBUG Features
-
-Under development
-
-##Testing
-
-Under development
-
-##Coding Style
-
-Under development
-
-##Workflow
-
-Under development
