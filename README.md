@@ -1,7 +1,12 @@
 ##Clone
+
+in your CLI
+
 ```
 git clone https://github.com/kdbaustert/url_shortener.git
 ```
+
+Or download by clicking the green "Clone or download"
 
 ## Installation
 
