@@ -11,6 +11,10 @@ module.exports = (express) => {
     res.json({ main: 'Main route hit!' });
   });
 
+  router.get('/status', (req, res) => {
+    res.json({ healthy: true });
+  });
+
   router.get('/go/:shortUrl', (req, res) => {
       const request = req;
       const response = res;
