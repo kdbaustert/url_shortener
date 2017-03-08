@@ -36,7 +36,7 @@ module.exports = (express) => {
   });
 
   // Update
-  router.get('/url/:id', (req, res) => {
+  router.post('/url/:id', (req, res) => {
     req.body.id = req.params.id;
     url.update(req.body, (err) => {
       res.status(500).json(err);
