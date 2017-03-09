@@ -23,6 +23,9 @@ app.use('/', require('./routes')(express));
 
 const server = app.listen(port, () => {
   console.log('Server Active on'.active, port);
+  if (process.env.DEBUG) {
+      console.log('Debugging activated!'.active);
+  }
 });
 
 //Export server
