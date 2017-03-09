@@ -13,10 +13,10 @@ module.exports = (express) => {
         req.body.shortened_url = shorten_url.shorten_url();
         url.create(req.body, (err) => {
             res.status(500).json(err);
-            debug.debug_error("error!");
+            debug.debug_error('The shortened URL was not successfully created because of the following error: ' + err);
         }, (data) => {
             res.status(200).json(data);
-            debug.debug_success("successfully created");
+            debug.debug_success('The shortened URL was successfully created.');
         });
 
     });
@@ -25,10 +25,10 @@ module.exports = (express) => {
     router.get('/url', (req, res) => {
         url.findAll((err) => {
             res.status(500).json(err);
-            debug.debug_error("error!");
+            debug.debug_error('The URLs were not successfully read because of the following error: ' + err);
         }, (data) => {
             res.status(200).json(data);
-            debug.debug_success("successfully found all!");
+            debug.debug_success('The URLs were successfully read.');
         })
     });
 
@@ -37,10 +37,10 @@ module.exports = (express) => {
         req.body.id = req.params.id;
         url.find(req.body, (err) => {
             res.status(500).json(err);
-            debug.debug_error("error!");
+            debug.debug_error('The URL was not successfully read because of the following error: ' + err);
         }, (data) => {
             res.status(200).json(data);
-            debug.debug_success("successfully found");
+            debug.debug_success('The URL was successfully read.');
         })
     });
 
@@ -49,10 +49,10 @@ module.exports = (express) => {
         req.body.id = req.params.id;
         url.update(req.body, (err) => {
             res.status(500).json(err);
-            debug.debug_error("error!");
+            debug.debug_error('The URL was not successfully updated because of the following error: ' + err);
         }, (data) => {
             res.status(200).json(data);
-            debug.debug_success("successfully updated");
+            debug.debug_success('The URL was successfully updated.');
         })
     });
 
@@ -61,10 +61,10 @@ module.exports = (express) => {
         req.body.id = req.params.id;
         url.destroy(req.body, (err) => {
             res.status(500).json(err);
-            debug.debug_error("error!");
+            debug.debug_error('The URL was not successfully deleted because of the following error: ' + err);
         }, (data) => {
             res.status(200).json(data);
-            debug.debug_success("successfully deleted!");
+            debug.debug_success('The URL was successfully deleted.');
         })
     });
 

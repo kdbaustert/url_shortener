@@ -10,12 +10,12 @@ module.exports = (express) => {
   // Router
   router.get('/', (req, res) => {
     res.json({ main: 'Main route hit!' });
-    debug.debug_success("Main route successful");
+    debug.debug_success("Main route successfully responded.");
   });
 
   router.get('/status', (req, res) => {
     res.json({ Healthy: true });
-    debug.debug_success("Status route successful");
+    debug.debug_success("The status route successfully responded.");
   });
 
   router.get('/go/:shortUrl', (req, res) => {
