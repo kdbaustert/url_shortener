@@ -114,6 +114,7 @@ Delete url based on id DELETE: /api/v1/url/:id
 
 #Debugging
 
+####Usage
 To turn on debugging make sure your in the directory of the url_shortner and type
 
 ```
@@ -134,7 +135,6 @@ Debugging activated!
 
 If it was successfully turned on
 
-##Usage
 When each route is hit you should see a console log within your CLI giving either a successful or error message
 
 If you don't want debugging simply type
