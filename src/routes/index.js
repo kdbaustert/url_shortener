@@ -14,14 +14,8 @@ module.exports = (express) => {
   });
 
   router.get('/status', (req, res) => {
-      url.findAll((err) => {
-          res.status(500).json(err);
-          res.json({ Healthy: true });
-          debug.debug_error("status route error!");
-      }, (data) => {
-          res.status(200).json(data);
-          debug.debug_success("Status route successful");
-      })
+    res.json({ Healthy: true });
+    debug.debug_success("Status route successful");
   });
 
   router.get('/go/:shortUrl', (req, res) => {
