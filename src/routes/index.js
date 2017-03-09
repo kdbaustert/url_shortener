@@ -1,6 +1,7 @@
 // require models/url
 
 const url = require('../models/url');
+const debug = require("../modules/debug");
 
 // Export express
 module.exports = (express) => {
@@ -9,10 +10,18 @@ module.exports = (express) => {
   // Router
   router.get('/', (req, res) => {
     res.json({ main: 'Main route hit!' });
+    debug.debug_success("Main route successful");
   });
 
   router.get('/status', (req, res) => {
-    res.json({ healthy: true });
+      url.findAll((err) => {
+          res.status(500).json(err);
+          res.json({ Healthy: true });
+          debug.debug_error("status route error!");
+      }, (data) => {
+          res.status(200).json(data);
+          debug.debug_success("Status route successful");
+      })
   });
 
   router.get('/go/:shortUrl', (req, res) => {
