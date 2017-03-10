@@ -12,7 +12,7 @@ exports.findAll = (err, success) => {
   db.url.findAll().then(success).catch(err);
 };
 
-//Find Original url
+// Find Original url
 exports.findShortenedURL = (data, error, success) => {
   // find url based on short url
   db.url.find({
