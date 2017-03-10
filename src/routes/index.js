@@ -10,12 +10,12 @@ module.exports = (express) => {
   // Router
   router.get('/', (req, res) => {
     res.json({ main: 'Main route hit!' });
-    debug.debug_success("Main route successfully responded.");
+    debug.debug("Main route successfully responded.", 'Successful');
   });
 
   router.get('/status', (req, res) => {
     res.json({ Healthy: true });
-    debug.debug_success("The status route successfully responded.");
+    debug.debug("The status route successfully responded.", 'Successful');
   });
 
   router.get('/go/:shortUrl', (req, res) => {
@@ -24,9 +24,11 @@ module.exports = (express) => {
       request.body.shortUrl = request.params.shortUrl;
       url.findShortenedURL(request.body, (err) => {
         response.status(500).json(err);
+        debug.debug("Could not redirect because of the following error " + err, 'Error! ');
       }, (data) => {
         // response redirects to original url
         response.redirect(data.original_url);
+        debug.debug("redirect successful", 'Successful');
       });
     });
 
