@@ -70,7 +70,7 @@ Server Active On 3000
 
 #API Reference
 
-Use postman do a POST request to localhost:3000/api/v1/url with the following data inside body
+Use postman do a POST request to localhost:3000/api/v1/url with the following data inside body it needs to be raw JSON
 
 ```
 {
