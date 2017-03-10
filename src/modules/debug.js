@@ -1,10 +1,10 @@
 const fs = require('fs');
 
 exports.debug = (data, status) => {
-  // date variable for timestamp
-    const time = new Date() + '\n';
+  // Timestamp
+  const time = new Date() + '\n';
 
-  // color variables
+  // colors
   const red = '\x1B[31m';
   const cyan = '\x1b[36m';
   const green = '\x1b[32m';
@@ -13,7 +13,7 @@ exports.debug = (data, status) => {
   if (status !== 'Successful') {
     var data = cyan + time + red + status + data;
   } else {
-      data = cyan + time + data + ': ' + green + status;
+    data = cyan + time + data + ': ' + green + status;
   }
 
   if (process.env.DEBUG === 'true') {

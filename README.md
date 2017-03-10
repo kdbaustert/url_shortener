@@ -66,7 +66,7 @@ In your CLI you should see
 
 ```
 Server Active On 3000
-``` 
+```
 
 #API Reference
 
@@ -148,3 +148,5 @@ or with nodemon src/server.js
 ```
 DEBUG=false nodemon src/server.js
 ```
+
+#Coding Style Guide
