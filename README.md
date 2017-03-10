@@ -66,7 +66,7 @@ In your CLI you should see
 
 ```
 Server Active On 3000
-```
+``` 
 
 #API Reference
 
