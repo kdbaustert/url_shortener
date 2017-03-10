@@ -1,6 +1,6 @@
 //requires
 const url = require('../../models/url');
-const shorten_url = require('../../modules/short_url');
+const genShortenUrl = require('../../modules/short_url');
 const debug = require("../../modules/debug");
 
 module.exports = (express) => {
@@ -10,7 +10,7 @@ module.exports = (express) => {
 
     //Create
     router.post('/url', (req, res) => {
-        req.body.shortened_url = shorten_url.shorten_url();
+        req.body.shortened_url = genShortenUrl.genShortenUrl();
         url.create(req.body, (err) => {
             res.status(500).json(err);
             debug.debug('Debugging activated!' + err, 'Error!' );
@@ -45,7 +45,7 @@ module.exports = (express) => {
     });
 
     //Update
-    router.get('/url/:id', (req, res) => {
+    router.post('/url/:id', (req, res) => {
         req.body.id = req.params.id;
         url.update(req.body, (err) => {
             res.status(500).json(err);
