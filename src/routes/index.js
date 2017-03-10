@@ -1,5 +1,4 @@
 // require models/url
-
 const url = require('../models/url');
 const debug = require('../modules/debug');
 
@@ -34,7 +33,6 @@ module.exports = (express) => {
 
   router.use('/api/v1', require('./api/url')(express));
 
-    // Return express router
-
+  // Return express router
   return router;
 };

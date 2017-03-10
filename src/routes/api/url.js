@@ -4,10 +4,10 @@ const genShortenUrl = require('../../modules/short_url');
 const debug = require('../../modules/debug');
 
 module.exports = (express) => {
-    // Express router
+  // Express router
   const router = express.Router();
 
-    // Create
+  // Create
   router.post('/url', (req, res) => {
     const reqBody = req.body;
     reqBody.shortened_url = genShortenUrl.genShortenUrl();
@@ -20,7 +20,7 @@ module.exports = (express) => {
     });
   });
 
-    // Get all
+  // Get all
   router.get('/url', (req, res) => {
     url.findAll((err) => {
       res.status(500).json(err);
@@ -31,7 +31,7 @@ module.exports = (express) => {
     });
   });
 
-    // Get by id
+  // Get by id
   router.get('/url/:id', (req, res) => {
     const reqBody = req.body;
     reqBody.id = req.params.id;
@@ -44,7 +44,7 @@ module.exports = (express) => {
     });
   });
 
-    // Update
+  // Update
   router.post('/url/:id', (req, res) => {
     const reqBody = req.body;
     reqBody.id = req.params.id;
@@ -57,7 +57,7 @@ module.exports = (express) => {
     });
   });
 
-    // Delete
+  // Delete
   router.delete('/url/:id', (req, res) => {
     const reqBody = req.body;
     reqBody.id = req.params.id;
@@ -70,7 +70,6 @@ module.exports = (express) => {
     });
   });
 
-    // Return
-
+  // Return
   return router;
 };

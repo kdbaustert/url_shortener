@@ -1,5 +1,4 @@
 //  Requires
-
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
@@ -29,6 +28,5 @@ const url = sequelize.define('url', {
 sequelize.sync();
 
 // Export sequelize
-
 exports.sequelize = sequelize;
 exports.url = url;

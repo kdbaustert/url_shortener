@@ -1,33 +1,30 @@
-//requires
-
+// requires
 const express = require('express');
 const bodyParser = require('body-parser');
-const debug = require("./modules/debug");
+const debug = require('./modules/debug');
 
-//Express
+// Express
 const app = express();
 
-//Port
+// Port
 const port = process.env.PORT || 3000;
 
-//pin to app
+// Pin to app
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded ({
+app.use(bodyParser.urlencoded({
   extended: true,
 }));
 
-//Route
+// Route
 app.use('/', require('./routes')(express));
 
-//Listen on port
-
+// Listen on port
 const server = app.listen(port, () => {
   console.log('Server Active on', port);
   if (process.env.DEBUG) {
-      debug.debug('Debugging Active!', 'Successful');
+    debug.debug('Debugging Active!', 'Successful');
   }
 });
 
-//Export server
-
+// Export server
 module.exports = server;
