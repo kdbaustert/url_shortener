@@ -1,26 +1,33 @@
-const color = require('colors');
+fs = require('fs');
 
-color.setTheme({
-    success: 'green',
-    error: 'red',
-    active: 'cyan',
-});
+exports.debug = (data, status, date)=>{
+  // date variable for timestamp
+  const time = new Date() + '\n';
 
-//Debug
+  // color variables
+  const red = '\x1B[31m';
+  const cyan = '\x1b[36m';
+  const green = '\x1b[32m';
 
-function debug_success(message) {
-    if (process.env.DEBUG) {
-        console.log(color.success(message));
-    }
-}
+  //if status is not successful
+  if(status !== "Successful") {
 
-function debug_error(message) {
-    if (process.env.DEBUG) {
-        console.log(color.error(message));
-    }
-}
+  var data = cyan + time + red + status + data;
 
-//Export
+  }else{
 
-exports.debug_success = debug_success;
-exports.debug_error = debug_error;
+     data = cyan + time + data + ': ' + green + status;
+  }
+
+  if(process.env.DEBUG === "true"){
+    // create log file
+    fs.appendFile('./logs/debuglog.log', data, (err) =>{
+      if(err){
+        return console.log(err);
+      }
+
+    });
+    console.log(data);
+  }
+
+};

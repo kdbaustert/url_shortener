@@ -22,9 +22,9 @@ app.use('/', require('./routes')(express));
 //Listen on port
 
 const server = app.listen(port, () => {
-  console.log('Server Active on'.active, port);
+  console.log('Server Active on', port);
   if (process.env.DEBUG) {
-      console.log('Debugging activated!'.active);
+      debug.debug('Debugging Active!', 'Successful');
   }
 });
 
