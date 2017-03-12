@@ -13,7 +13,7 @@ module.exports = (express) => {
   });
 
   router.get('/status', (req, res) => {
-    res.json({ Healthy: true });
+    res.json({ healthy: true });
     debug.debug('The status route successfully responded.', 'Successful');
   });
 
