@@ -149,4 +149,6 @@ or with nodemon src/server.js
 DEBUG=false nodemon src/server.js
 ```
 
-#Coding Style Guide
+#Coding Style
+
+The code styling used in this project was done with eslint-config-airbnb and installing the plugin for Atom You can find the documentation for it here [eslint-airbnb](https://www.npmjs.com/package/eslint-config-airbnb) and here for Atom [eslint for Atom](https://atom.io/packages/eslint)
