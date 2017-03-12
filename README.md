@@ -152,3 +152,10 @@ DEBUG=false nodemon src/server.js
 #Coding Style
 
 The code styling used in this project was done with eslint-config-airbnb and installing the plugin for Atom You can find the documentation for it here [eslint-airbnb](https://www.npmjs.com/package/eslint-config-airbnb) and here for Atom [eslint for Atom](https://atom.io/packages/eslint)
+
+#Unit Tests
+Please make sure you have installed mocha and chai using npm globally
+
+Then simply run mocha in your CLI.
+
+This will run a test for each route.
