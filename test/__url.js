@@ -47,7 +47,7 @@ describe('URL Routes', () => {
   });
 
   // Testing for a single url
-  it('GET /api/v1/urls/:id  Get url based on id', (done) => {
+  it('GET /api/v1/url/:id  Get url based on id', (done) => {
     request(server)
         .get('/api/v1/url/' + this.url.id)
         .set('Accept', 'application/json')
