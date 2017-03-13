@@ -159,3 +159,9 @@ Please make sure you have installed mocha and chai using npm globally
 Then simply run mocha in your CLI.
 
 This will run a test for each route.
+
+For the /go/:shortURL test the shortened url of Cn1bTPv needs to be in the database or you may change it based on a existing url
+
+```
+.get('/go/Cn1bTPv') // This shortURL needs to be in the database
+```
