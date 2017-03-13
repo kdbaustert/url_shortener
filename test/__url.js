@@ -47,27 +47,26 @@ describe('URL Routes', () => {
   });
 
   // Testing for a single url
-  it('GET /api/v1/url/:id returns an url obj with id,', (done) => {
+  it('GET /api/v1/urls/:id  Get url based on id', (done) => {
     request(server)
-      .get('/api/v1/url/' + this.url.id)
-      .set('Accept', 'application/json')
-      .expect('Content-Type', /json/)
-      .expect((res) => {
-        const url = res.body;
-        expect(url).to.have.property('id');
-        expect(url).to.have.property('original_url');
-        expect(url).to.have.property('shortened_url');
-        expect(url).to.have.property('createdAt');
-        expect(url).to.have.property('updatedAt');
-      })
-    .end(done);
+        .get('/api/v1/url/' + this.url.id)
+        .set('Accept', 'application/json')
+        .expect('Content-Type', /json/)
+        .expect(() => {
+          expect(this.url).to.have.property('id');
+          expect(this.url).to.have.property('original_url');
+          expect(this.url).to.have.property('shortened_url');
+          expect(this.url).to.have.property('createdAt');
+          expect(this.url).to.have.property('updatedAt');
+        })
+      .end(done);
   });
 
   // Update test
-  it('POST /api/v1/url/:id  Update url based on id', (done) => {
+  it('POST /api/v1/urls/:id  Update url based on id', (done) => {
     const body = {
-      original_url: 'http://www.nextdesignz.com',
-      shortened_url: 'XrhbZqP',
+      original_url: 'http://google.com',
+      shortened_url: 'kL4v1',
     };
     request(server)
         .put('/api/v1/url/' + this.url.id)
