@@ -63,10 +63,10 @@ describe('URL Routes', () => {
   });
 
   // Update test
-  it('POST /api/v1/urls/:id  Update url based on id', (done) => {
+  it('POST /api/v1/url/:id  Update url based on id', (done) => {
     const body = {
-      original_url: 'http://google.com',
-      shortened_url: 'kL4v1',
+      original_url: 'http://www.nextdesignz.com',
+      shortened_url: 'XrhbZqP',
     };
     request(server)
         .put('/api/v1/url/' + this.url.id)
