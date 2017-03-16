@@ -1,7 +1,7 @@
 // Requires
 const url = require('../../models/url');
 const genShortenUrl = require('../../modules/short_url');
-const debug = require('../../modules/debug');
+const debug = require('nx-debugtool');
 
 module.exports = (express) => {
   // Express router

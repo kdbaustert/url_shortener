@@ -1,6 +1,6 @@
 // require models/url
 const url = require('../models/url');
-const debug = require('../modules/debug');
+const debug = require('nx-debugtool');
 
 // Export express
 module.exports = (express) => {

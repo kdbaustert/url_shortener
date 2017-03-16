@@ -1,7 +1,7 @@
 // requires
 const express = require('express');
 const bodyParser = require('body-parser');
-const debug = require('./modules/debug');
+const debug = require('nx-debugtool');
 
 // Express
 const app = express();
