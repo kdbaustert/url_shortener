@@ -139,18 +139,6 @@ If it was successfully turned on
 
 When each route is hit you should see a console log within your CLI giving either a successful or error message
 
-If you don't want debugging simply type
-
-```
-DEBUG=false node src/server.js
-```
-
-or with nodemon src/server.js
-
-```
-DEBUG=false nodemon src/server.js
-```
-
 # Coding Style
 
 The code styling used in this project was done with eslint-config-airbnb and installing the plugin for Atom You can find the documentation for it here [eslint-airbnb](https://www.npmjs.com/package/eslint-config-airbnb) and here for Atom [eslint for Atom](https://atom.io/packages/eslint)
