@@ -1,4 +1,4 @@
-#Clone
+# Clone
 
 in your CLI
 
@@ -42,7 +42,7 @@ DB_SCHEMA=mysql
 DB_PORT=[port]
 ```
 
-#Starting the server
+# Starting the server
 
 To start the server simply type
 
@@ -87,17 +87,17 @@ You can also check the status by doing a get request to localhost:3000/status yo
 }
 ```
 
-#Starting point
+# Starting point
 
 ```
 localhost:3000
 ```
 
-#Routes
+# Routes
 
 GET /go/:shortURL
 
-#API Endpoints
+# API Endpoints
 
 Status
 GET: /status
@@ -112,11 +112,11 @@ Update URL based on id POST: /api/v1/url/:id
 
 Delete url based on id DELETE: /api/v1/url/:id
 
-#Debugging
+# Debugging
 
 [Debugging package documentation](https://github.com/kdbaustert/Utility-Tool)
 
-##Usage
+### Usage
 To turn on debugging make sure your in the directory of the url_shortner and type
 
 ```
@@ -151,11 +151,11 @@ or with nodemon src/server.js
 DEBUG=false nodemon src/server.js
 ```
 
-#Coding Style
+# Coding Style
 
 The code styling used in this project was done with eslint-config-airbnb and installing the plugin for Atom You can find the documentation for it here [eslint-airbnb](https://www.npmjs.com/package/eslint-config-airbnb) and here for Atom [eslint for Atom](https://atom.io/packages/eslint)
 
-#Unit Tests
+# Unit Tests
 Please make sure you have installed mocha and chai using npm globally
 
 Then simply run mocha in your CLI.
