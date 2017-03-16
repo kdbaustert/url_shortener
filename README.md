@@ -114,6 +114,8 @@ Delete url based on id DELETE: /api/v1/url/:id
 
 #Debugging
 
+[Debugging package documentation]https://github.com/kdbaustert/Utility-Tool
+
 ####Usage
 To turn on debugging make sure your in the directory of the url_shortner and type
 
