@@ -8,7 +8,7 @@ module.exports = (express) => {
 
   // Router
   router.get('/', (req, res) => {
-    res.json({ main: 'Main route hit!....' });
+    res.json({ main: 'Main route hit!' });
     debug.debug('Main route successfully responded.', 'Successful');
   });
 
