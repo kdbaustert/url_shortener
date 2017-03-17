@@ -162,8 +162,6 @@ All test should come back passed
 
 # Work Flow
 
-### Digital Ocean
-
 1. Create a new branch
 
 ```
