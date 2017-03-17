@@ -159,3 +159,5 @@ For the /go/:shortURL test the shortened url of Cn1bTPv needs to be in the datab
 All test should come back passed
 
 <img width="764" alt="screen shot 2017-03-12 at 8 11 09 pm" src="https://cloud.githubusercontent.com/assets/12704978/23837546/9d081630-0760-11e7-9a23-c2d2e93131ea.png">
+
+# Work Flow
