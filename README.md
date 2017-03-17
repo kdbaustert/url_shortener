@@ -161,3 +161,29 @@ All test should come back passed
 <img width="764" alt="screen shot 2017-03-12 at 8 11 09 pm" src="https://cloud.githubusercontent.com/assets/12704978/23837546/9d081630-0760-11e7-9a23-c2d2e93131ea.png">
 
 # Work Flow
+
+### Digital Ocean
+
+1. Create a new branch
+
+```
+git checkout <branch_name>
+```
+
+2. commit push changes
+
+```
+git add .
+git commit -m 'commit message'
+git push origin <branch_name>
+```
+3. Merge the feature branch you created to the master
+```
+git checkout master
+git merge <branch_name>
+git push origin master
+```
+4. In order to push to Digital Ocean
+```
+git push live
+```
