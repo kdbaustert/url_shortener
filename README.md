@@ -183,7 +183,9 @@ git checkout master
 git merge <branch_name>
 git push origin master
 ```
-4. Deployment to Digital Ocean
+# Deployment
+
+### Deploy to Digital Ocean
 ```
 git push live
 ```
