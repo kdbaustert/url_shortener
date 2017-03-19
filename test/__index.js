@@ -1,11 +1,16 @@
-const expect = require('chai').expect;
 const request = require('supertest');
-const server = require('../src/server.js');
+const express = require('express');
+const expect = require('chai').expect;
 
 // Unit Test
 
 describe('API Routes', () => {
-  /* eslint no-undef: "error" */
+  let server;
+
+  beforeEach(() => {
+    server = require('../src/server.js');
+  });
+
   afterEach(() => {
     server.close();
   });
