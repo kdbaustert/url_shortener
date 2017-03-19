@@ -187,3 +187,11 @@ git push origin master
 ```
 git push live
 ```
+
+### Deploy to Heroku
+
+```
+git push -u
+```
+
+Once you push the master branch the url shortener will go into the staging only if tests pass by codeship this will allow you to test the app before promoting the app to production through heroku.
