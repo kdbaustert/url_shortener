@@ -1,3 +1,6 @@
+https://app.codeship.com/projects/e1214930-eda5-0134-7325-520326763575/status?branch=master
+<img width="100%" alt="codeship" src="https://app.codeship.com/projects/e1214930-eda5-0134-7325-520326763575/status?branch=master">
+
 # Clone
 
 in your CLI
@@ -191,7 +194,7 @@ git push live
 ### Deploy to Heroku
 
 ```
-git push -u
+git push origin master
 ```
 
 Once you push the master branch the url shortener will go into the staging only if tests pass by codeship this will allow you to test the app before promoting the app to production through heroku.
