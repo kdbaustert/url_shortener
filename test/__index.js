@@ -29,7 +29,7 @@ describe('API Routes', () => {
   // Test for go shortURL
   it('/go/:shortURL should redirect user to long URL', (done) => {
     request(server)
-  .get('/go/Cn1bTPv') // This shortURL needs to be in the database
+  .get('/go/Cn1bTPv')  // This shortURL needs to be in the database
   .expect(302, done);
   });
 });
