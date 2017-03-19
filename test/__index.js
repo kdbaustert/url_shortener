@@ -1,4 +1,4 @@
-/*const request = require('supertest');
+const request = require('supertest');
 const express = require('express');
 const expect = require('chai').expect;
 
@@ -37,4 +37,4 @@ describe('API Routes', () => {
   .get('/go/Cn1bTPv')  // This shortURL needs to be in the database
   .expect(302, done);
   });
-});*/
+});
