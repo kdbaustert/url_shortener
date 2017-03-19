@@ -4,8 +4,7 @@
   "description": "url_shortener",
   "main": "src/server.js",
   "scripts": {
-    "test": "mocha",
-    "start": "node src/server.js"
+    "test": "mocha"
 }
   },
   "repository": {
