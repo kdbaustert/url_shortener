@@ -1,5 +1,4 @@
-https://app.codeship.com/projects/e1214930-eda5-0134-7325-520326763575/status?branch=master
-<img width="100%" alt="codeship" src="https://app.codeship.com/projects/e1214930-eda5-0134-7325-520326763575/status?branch=master">
+<img width="121px" alt="codeship" src="https://app.codeship.com/projects/e1214930-eda5-0134-7325-520326763575/status?branch=master">
 
 # Clone
 
