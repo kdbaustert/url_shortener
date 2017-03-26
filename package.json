@@ -23,7 +23,7 @@
     "express": "^4.15.0",
     "mocha": "^3.2.0",
     "mysql": "^2.13.0",
-    "nx-debugtool": "^1.0.0",
+    "nx-debugtool": "^1.1.0",
     "sequelize": "^3.30.2",
     "supertest": "^3.0.0"
   },
